@@ -17,6 +17,7 @@ defmodule IChing.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/hexagrams", HexagramController, only: [:index, :show]
   end
 
   # Other scopes may use custom stacks.
