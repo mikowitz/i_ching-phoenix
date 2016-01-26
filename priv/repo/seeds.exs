@@ -45,7 +45,7 @@ defmodule Seeds do
 
   defp import_judgements([]), do: nil
   defp import_judgements([judgement | rest]) do
-    image |> import_association(:judgement)
+    judgement |> import_association(:judgement)
     rest |> import_judgements
   end
 
