@@ -1,0 +1,8 @@
+h1 Hexagrams
+
+table.table
+  tbody
+    = for hexagram <- @hexagrams do
+      tr
+        th= hexagram.english_name
+        th= link "Show", to: hexagram_path(@conn, :show, hexagram.king_wen_number)
