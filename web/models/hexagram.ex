@@ -8,6 +8,9 @@ defmodule IChing.Hexagram do
     field :characters, :string
     field :binary, :integer
 
+    has_one :judgement, IChing.Judgement, on_delete: :delete_all
+    has_one :image, IChing.Image, on_delete: :delete_all
+
     timestamps
   end
 

@@ -15,7 +15,9 @@ defmodule IChing.HexagramView do
       english_name: hexagram.english_name,
       chinese_name: hexagram.chinese_name,
       characters: hexagram.characters,
-      binary: hexagram.binary
+      binary: hexagram.binary,
+      judgement: hexagram.judgement.content,
+      image: hexagram.image.content
     }
   end
 end

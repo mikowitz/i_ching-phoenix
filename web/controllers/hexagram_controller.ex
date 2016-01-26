@@ -9,7 +9,7 @@ defmodule IChing.HexagramController do
   end
 
   def show(conn, %{"id" => id}) do
-    hexagram = Repo.get_by!(Hexagram, king_wen_number: id)
+    hexagram = Repo.get_by!(Hexagram, king_wen_number: id) |> Repo.preload([:judgement, :image])
     render conn, hexagram: hexagram
   end
 end
