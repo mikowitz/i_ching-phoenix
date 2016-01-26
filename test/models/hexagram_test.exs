@@ -3,7 +3,7 @@ defmodule IChing.HexagramTest do
 
   alias IChing.Hexagram
 
-  @valid_attrs %{}
+  @valid_attrs %{king_wen_number: 1, english_name: "English Name", chinese_name: "Chinese Name"}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

@@ -14,8 +14,8 @@ defmodule IChing.Hexagram do
     timestamps
   end
 
-  @required_fields ~w(king_wen_number english_name chinese_name characters binary)
-  @optional_fields ~w()
+  @required_fields ~w(king_wen_number english_name chinese_name)
+  @optional_fields ~w(characters binary)
 
   @doc """
   Creates a changeset based on the `model` and `params`.

@@ -4,11 +4,13 @@
 
 
 .row
-  .col-xs-6
-    p
-      .h4 Judgement
-      = @hexagram.judgement.content |> String.replace("\n", "<br />") |> raw
-  .col-xs-6
-    p
-      .h4 Image
-      = @hexagram.image.content |> String.replace("\n", "<br />") |> raw
+  = if @hexagram.judgement do
+    .col-xs-6
+      p
+        .h4 Judgement
+        = @hexagram.judgement.content |> String.replace("\n", "<br />") |> raw
+  = if @hexagram.image do
+    .col-xs-6
+      p
+        .h4 Image
+        = @hexagram.image.content |> String.replace("\n", "<br />") |> raw
