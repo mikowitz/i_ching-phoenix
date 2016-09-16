@@ -23,6 +23,8 @@ defmodule IChing.Router do
   scope "/api", IChing, as: :api do
     pipe_through :api
 
+    get "/current_version", ApiVersionController, :index
+
     scope "/v1", as: :v1 do
       resources "/hexagrams", HexagramController, only: [:index, :show]
     end

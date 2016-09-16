@@ -37,6 +37,7 @@ defmodule IChing.Mixfile do
      {:phoenix_slime, "~> 0.4.1"},
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.9"},
+     {:sqlitex, "~> 1.0"},
      {:cowboy, "~> 1.0"}]
   end
 

@@ -26,7 +26,7 @@ defmodule IChing.HexagramView do
     |> attach_assoc(:image, hexagram.image)
   end
 
-  defp attach_assoc(json, assoc_type, nil), do: json
+  defp attach_assoc(json, _, nil), do: json
   defp attach_assoc(json, assoc_type, assoc) do
     json |> Dict.put(assoc_type, assoc.content)
   end
